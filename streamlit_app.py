@@ -45,8 +45,6 @@ except URLError as e:
 #import requests
 #streamlit.text(fruityvice_response.json()) # just write the data to the screen
 
-#don't run anything past here while we troubleshoot
-streamlit.stop()
 
 #import snowflake connector
 #import snowflake.connector
@@ -62,6 +60,8 @@ if streamlit.button ('get_fruit_load_list'):
   my_data_rows = get_fruit_load_list()
   streamlit.dataframe(my_data_rows)
 
+ #don't run anything past here while we troubleshoot
+streamlit.stop()
 #my_cur.execute("SELECT CURRENT_USER(), CURRENT_ACCOUNT(), CURRENT_REGION()") # query metadata
  # query data
 
